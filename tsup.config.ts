@@ -3,8 +3,8 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: [
     'src/index.ts',            // root
-    'src/utils/array.ts',      // explicit subpath entry
-    'src/utils/numbers.ts'     // explicit subpath entry
+    'src/utils/dataTypes/array.ts',      // explicit subpath entry
+    'src/utils/dataTypes/numbers.ts'     // explicit subpath entry
   ],
   outDir: 'dist',
   sourcemap: true,
