@@ -13,8 +13,8 @@
     "start": "node dist/index.js",
     "build": "tsup && tsx script.ts",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf dist"
-
+    "clean": "rimraf dist",
+    "prepare": "pnpm run build"
   },
   "keywords": [],
   "author": "theaiemperor/Arman",
