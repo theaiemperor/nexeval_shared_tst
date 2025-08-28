@@ -12,8 +12,7 @@
     "build": "tsup",
     "postbuild": "tsx script.ts",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf dist",
-    "prepare": "pnpm run build"
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "theaiemperor/Arman",
@@ -35,5 +34,4 @@
     "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2"
-  }
-}
+  
