@@ -10,11 +10,11 @@
   ],
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "clean": "rimraf dist",
-    "build": "tsup ",
-    "typecheck": "tsc --noEmit",
     "start": "node dist/index.js",
-    "prepare": "pnpm run build"
+    "build": "tsup && tsx script.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+
   },
   "keywords": [],
   "author": "theaiemperor/Arman",
