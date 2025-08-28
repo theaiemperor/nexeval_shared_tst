@@ -12,6 +12,7 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsup",
     "postbuild": "tsx script.ts",
+    "prepublish": "pnpm run build",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist"
   },
