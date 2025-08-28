@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ["src", "./script.ts"],
+  entry: ["src"],
   outDir: 'dist',
   sourcemap: true,
   dts: true,                  // generate .d.ts files
