@@ -17,11 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import arrayUtils from "./utils/dataTypes/arrays.js"
 
 export default function NexEvalShared(){
     console.log("Nice to meet You!")
 }
-
-export * from './utils/dataTypes/arrays.js';
-export * from './utils/dataTypes/strings.js';
