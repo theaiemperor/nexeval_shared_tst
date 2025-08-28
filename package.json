@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "clean": "rimraf dist",
-    "build": "tsup",
+    "build": "tsup && tsx scripts.ts",
     "typecheck": "tsc --noEmit",
     "start": "node dist/index.js",
     "prepare": "pnpm run build"
@@ -38,15 +38,120 @@
     "typescript": "^5.9.2"
   },
   "exports": {
+    "./index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./client/lib/axios/apiCall": {
+      "types": "./dist/client/lib/axios/apiCall.d.ts",
+      "import": "./dist/client/lib/axios/apiCall.js",
+      "require": "./dist/client/lib/axios/apiCall.cjs"
+    },
+    "./client/utils/localstorage": {
+      "types": "./dist/client/utils/localstorage.d.ts",
+      "import": "./dist/client/utils/localstorage.js",
+      "require": "./dist/client/utils/localstorage.cjs"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.cjs"
+    },
+    "./server/api/interview/ai/assessment": {
+      "types": "./dist/server/api/interview/ai/assessment/index.d.ts",
+      "import": "./dist/server/api/interview/ai/assessment/index.js",
+      "require": "./dist/server/api/interview/ai/assessment/index.cjs"
+    },
+    "./server/api/interview/ai/live": {
+      "types": "./dist/server/api/interview/ai/live/index.d.ts",
+      "import": "./dist/server/api/interview/ai/live/index.js",
+      "require": "./dist/server/api/interview/ai/live/index.cjs"
+    },
+    "./server/api/interview/ai/live/schema": {
+      "types": "./dist/server/api/interview/ai/live/schema.d.ts",
+      "import": "./dist/server/api/interview/ai/live/schema.js",
+      "require": "./dist/server/api/interview/ai/live/schema.cjs"
+    },
+    "./server/api/interview/ai/log": {
+      "types": "./dist/server/api/interview/ai/log/index.d.ts",
+      "import": "./dist/server/api/interview/ai/log/index.js",
+      "require": "./dist/server/api/interview/ai/log/index.cjs"
+    },
+    "./server/api/interview/ai/result": {
+      "types": "./dist/server/api/interview/ai/result/index.d.ts",
+      "import": "./dist/server/api/interview/ai/result/index.js",
+      "require": "./dist/server/api/interview/ai/result/index.cjs"
+    },
+    "./server/lib/express/middlewares/verifyReqUID": {
+      "types": "./dist/server/lib/express/middlewares/verifyReqUID.d.ts",
+      "import": "./dist/server/lib/express/middlewares/verifyReqUID.js",
+      "require": "./dist/server/lib/express/middlewares/verifyReqUID.cjs"
+    },
+    "./server/lib/express/response/apiResponse": {
+      "types": "./dist/server/lib/express/response/apiResponse.d.ts",
+      "import": "./dist/server/lib/express/response/apiResponse.js",
+      "require": "./dist/server/lib/express/response/apiResponse.cjs"
+    },
+    "./server/lib/express/response/apiResponseTypes": {
+      "types": "./dist/server/lib/express/response/apiResponseTypes.d.ts",
+      "import": "./dist/server/lib/express/response/apiResponseTypes.js",
+      "require": "./dist/server/lib/express/response/apiResponseTypes.cjs"
+    },
+    "./server/lib/jwt/jwtToken": {
+      "types": "./dist/server/lib/jwt/jwtToken.d.ts",
+      "import": "./dist/server/lib/jwt/jwtToken.js",
+      "require": "./dist/server/lib/jwt/jwtToken.cjs"
+    },
+    "./server/lib/mongoose/verfiyMongoUID": {
+      "types": "./dist/server/lib/mongoose/verfiyMongoUID.d.ts",
+      "import": "./dist/server/lib/mongoose/verfiyMongoUID.js",
+      "require": "./dist/server/lib/mongoose/verfiyMongoUID.cjs"
+    },
+    "./server/lib/zod/zodValidator": {
+      "types": "./dist/server/lib/zod/zodValidator.d.ts",
+      "import": "./dist/server/lib/zod/zodValidator.js",
+      "require": "./dist/server/lib/zod/zodValidator.cjs"
+    },
+    "./types/common": {
+      "types": "./dist/types/common.d.ts",
+      "import": "./dist/types/common.js",
+      "require": "./dist/types/common.cjs"
+    },
+    "./utils/dataTypes/arrays": {
+      "types": "./dist/utils/dataTypes/arrays.d.ts",
+      "import": "./dist/utils/dataTypes/arrays.js",
+      "require": "./dist/utils/dataTypes/arrays.cjs"
+    },
+    "./utils/dataTypes/dateTime": {
+      "types": "./dist/utils/dataTypes/dateTime.d.ts",
+      "import": "./dist/utils/dataTypes/dateTime.js",
+      "require": "./dist/utils/dataTypes/dateTime.cjs"
+    },
+    "./utils/dataTypes/misc": {
+      "types": "./dist/utils/dataTypes/misc.d.ts",
+      "import": "./dist/utils/dataTypes/misc.js",
+      "require": "./dist/utils/dataTypes/misc.cjs"
+    },
+    "./utils/dataTypes/numbers": {
+      "types": "./dist/utils/dataTypes/numbers.d.ts",
+      "import": "./dist/utils/dataTypes/numbers.js",
+      "require": "./dist/utils/dataTypes/numbers.cjs"
+    },
+    "./utils/dataTypes/objects": {
+      "types": "./dist/utils/dataTypes/objects.d.ts",
+      "import": "./dist/utils/dataTypes/objects.js",
+      "require": "./dist/utils/dataTypes/objects.cjs"
+    },
+    "./utils/dataTypes/strings": {
+      "types": "./dist/utils/dataTypes/strings.d.ts",
+      "import": "./dist/utils/dataTypes/strings.js",
+      "require": "./dist/utils/dataTypes/strings.cjs"
+    },
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
-    },
-    "./utils/*": {
-      "types": "./dist/utils/*.d.ts",
-      "import": "./dist/utils/*.js",
-      "require": "./dist/utils/*.cjs.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   }
 }

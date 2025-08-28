@@ -1,11 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: [
-    'src/index.ts',            // root
-    'src/utils/dataTypes/arrays.ts',      // explicit subpath entry
-    'src/utils/dataTypes/numbers.ts'     // explicit subpath entry
-  ],
+  entry: ["src"],
   outDir: 'dist',
   sourcemap: true,
   dts: true,                  // generate .d.ts files
